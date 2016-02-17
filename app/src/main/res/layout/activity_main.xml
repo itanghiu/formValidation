@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D8D8D8"
+    >
+
+    <LinearLayout
+        android:id="@+id/saisissezEmailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:textColor="@android:color/holo_blue_dark"
+            android:text="FORM VALIDATION"/>
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="@android:color/white"
+            android:singleLine="true"
+            android:hint="Email"
+            android:padding="14dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/confirmEmail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:singleLine="true"
+            android:padding="14dp"
+            android:layout_margin="10dp"
+            android:hint="Confirm email"
+            android:background="@android:color/white"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/codeNumber"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:singleLine="true"
+            android:padding="14dp"
+            android:layout_margin="10dp"
+            android:hint="Code number"
+            android:background="@android:color/white"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:singleLine="true"
+            android:padding="14dp"
+            android:layout_margin="10dp"
+            android:hint="Phone number"
+            android:background="@android:color/white"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:textColor="@android:color/holo_blue_dark"
+           />
+
+        <Button
+            android:id="@+id/validate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textColor="#FFFFFF"
+            android:background="@android:color/holo_blue_dark"
+            android:text="VALIDATE"
+            />
+
+
+    </LinearLayout>
+</LinearLayout>

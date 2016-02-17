@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Form validation</string>
+    <string name="emailCantBeEmpty">Email can not be empty.</string>
+    <string name="InvalidEmailTitle">This email is invalid.</string>
+    <string name="confirmEmailError">the email is not the same than above.</string>
+    <string name="invalidCodeNumber">Invalid code number (max 4 numbers).</string>
+    <string name="wrongPhone">Wrong phone format</string>
+    <string name="phoneCantBeEmpty">Phone number can not be empty.</string>
+
+
+</resources>
