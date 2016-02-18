@@ -24,11 +24,11 @@ public class MainActivity extends AppCompatActivity implements Validator.Validat
     @Email(messageResId = R.string.InvalidEmailTitle)
     private EditText emailEditText;
 
-    @NotEmpty(messageResId = R.string.emailCantBeEmpty)
+   /* @NotEmpty(messageResId = R.string.emailCantBeEmpty)
     @ConfirmEmail(messageResId = R.string.confirmEmailError)
-    private EditText confirmEmail;
+    private EditText confirmEmail;*/
 
-    @DecimalMax(value = 4, messageResId = R.string.invalidCodeNumber)
+    @DecimalMax(value = 100, messageResId = R.string.invalidCodeNumber)
     EditText codeNumber;
 
     @NotEmpty(messageResId = R.string.phoneCantBeEmpty)
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements Validator.Validat
     private void init() {
 
         emailEditText = (EditText) findViewById(R.id.email);
-        confirmEmail = (EditText) findViewById(R.id.confirmEmail);
+        //confirmEmail = (EditText) findViewById(R.id.confirmEmail);
         phoneEditText = (EditText) findViewById(R.id.phone);
         codeNumber = (EditText) findViewById(R.id.codeNumber);
         validationButton = (Button) findViewById(R.id.validate);
