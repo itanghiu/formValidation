@@ -19,14 +19,9 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements Validator.ValidationListener, View.OnClickListener {
 
-    private Validator validator;
     @NotEmpty(messageResId = R.string.emailCantBeEmpty)
     @Email(messageResId = R.string.InvalidEmailTitle)
     private EditText emailEditText;
-
-   /* @NotEmpty(messageResId = R.string.emailCantBeEmpty)
-    @ConfirmEmail(messageResId = R.string.confirmEmailError)
-    private EditText confirmEmail;*/
 
     @DecimalMax(value = 100, messageResId = R.string.invalidCodeNumber)
     EditText codeNumber;
@@ -34,8 +29,10 @@ public class MainActivity extends AppCompatActivity implements Validator.Validat
     @NotEmpty(messageResId = R.string.phoneCantBeEmpty)
     @CGLibPhoneValidator(messageResId = R.string.wrongPhone)
     EditText phoneEditText;
-    Button validationButton;
-    TextView statusTextView;
+
+    private Button validationButton;
+    private TextView statusTextView;
+    private Validator validator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +45,6 @@ public class MainActivity extends AppCompatActivity implements Validator.Validat
     private void init() {
 
         emailEditText = (EditText) findViewById(R.id.email);
-        //confirmEmail = (EditText) findViewById(R.id.confirmEmail);
         phoneEditText = (EditText) findViewById(R.id.phone);
         codeNumber = (EditText) findViewById(R.id.codeNumber);
         validationButton = (Button) findViewById(R.id.validate);
