@@ -6,11 +6,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.mobsandgeeks.saripaar.ValidationError;
 import com.mobsandgeeks.saripaar.Validator;
-import com.mobsandgeeks.saripaar.annotation.ConfirmEmail;
 import com.mobsandgeeks.saripaar.annotation.DecimalMax;
 import com.mobsandgeeks.saripaar.annotation.Email;
 import com.mobsandgeeks.saripaar.annotation.NotEmpty;
@@ -27,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements Validator.Validat
     EditText codeNumber;
 
     @NotEmpty(messageResId = R.string.phoneCantBeEmpty)
-    @CGLibPhoneValidator(messageResId = R.string.wrongPhone)
+    @CustomPhoneValidator(messageResId = R.string.wrongPhone)
     EditText phoneEditText;
 
     private Button validationButton;
@@ -49,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements Validator.Validat
         codeNumber = (EditText) findViewById(R.id.codeNumber);
         validationButton = (Button) findViewById(R.id.validate);
 
-        com.mobsandgeeks.saripaar.Validator.registerAnnotation(CGLibPhoneValidator.class); // adds the custom Phone input field validation
+        com.mobsandgeeks.saripaar.Validator.registerAnnotation(CustomPhoneValidator.class); // adds the custom Phone input field validation
         validator = new Validator(this);
         validator.setValidationListener(this);
         validationButton.setOnClickListener(this);

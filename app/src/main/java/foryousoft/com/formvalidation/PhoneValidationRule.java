@@ -5,9 +5,9 @@ import com.mobsandgeeks.saripaar.AnnotationRule;
 /**
  * Created by ihiu on 22/12/2015.
  */
-public class PhoneValidationRule extends AnnotationRule<CGLibPhoneValidator, String> {
+public class PhoneValidationRule extends AnnotationRule<CustomPhoneValidator, String> {
 
-    protected PhoneValidationRule(CGLibPhoneValidator haggle) {
+    protected PhoneValidationRule(CustomPhoneValidator haggle) {
         super(haggle);
     }
 

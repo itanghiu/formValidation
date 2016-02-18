@@ -16,11 +16,10 @@ import java.lang.annotation.Target;
 @ValidateUsing(PhoneValidationRule.class)
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
-public @interface CGLibPhoneValidator {
+public @interface CustomPhoneValidator {
 
     public int messageResId()   default -1;                     // Mandatory attribute
     // public String message()     default ICsts.WRONG_PHONE_NUMBER;   // Mandatory attribute
     public String message()     default "";   // Mandatory attribute
-
     public int sequence()       default -1;                     // Mandatory attribute
 }
